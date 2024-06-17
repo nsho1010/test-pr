@@ -18,18 +18,14 @@ import 'highlight.js/styles/hybrid.css';
 
 export async function generateMetadata(  { params }: {params: {slug: string}, parent: ResolvingMetadata}): Promise<Metadata> {
   const data = await getNewsDetail(params.slug)
-  return {
+  return getSEOTags({
     title: data.title + ' | ' + config.appName,
     description: data.description,
     openGraph: {
       title: data.title + ' | ' + config.appName,
       description: data.description,
-    },
-    twitter: {
-      title: data.title + ' | ' + config.appName,
-      description: data.description,
     }
-  }
+  })
 }
 
 const NewsDetailPage = async ({params}: {params: {slug: string}}) => {
