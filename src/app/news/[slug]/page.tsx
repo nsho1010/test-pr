@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Metadata, ResolvingMetadata } from 'next'
+import { Metadata } from 'next'
 import { getNewsDetail } from "@/lib/microcms";
 import { formatDate } from '@/lib/utils';
 import { getSEOTags } from '@/lib/seo';
