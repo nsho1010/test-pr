@@ -11,12 +11,16 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
+import config from '@/config'
 import { getSEOTags } from "@/lib/seo";
 
 export const metadata = getSEOTags({
-  title: 'お知らせ',
-  description: '爆速コーポレーションのお知らせ一覧ページです。',
-  canonicalUrlRelative: '/news',
+  title: 'お知らせ | ' + config.appName,
+  description: config.appName + 'のお知らせ一覧ページです。',
+  openGraph: {
+    title: 'お知らせ | ' + config.appName,
+    description: config.appName + 'のお知らせ一覧ページです。',
+  }
 });
 
 const NewsListPage = async ({searchParams}: {searchParams: {page: number, pageSize: number}}) => {

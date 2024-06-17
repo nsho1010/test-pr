@@ -7,7 +7,17 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 import 'highlight.js/styles/hybrid.css';
+import { getSEOTags } from '@/lib/seo';
+import config from '@/config'
 
+export const metadata = getSEOTags({
+  title: 'プライバシーポリシー | ' + config.appName,
+  description: config.appDescription,
+  openGraph: {
+    title: 'プライバシーポリシー | ' + config.appName,
+    description: config.appDescription,
+  }
+})
 
 const PrivacyPolicyPage = () => {
   return (
