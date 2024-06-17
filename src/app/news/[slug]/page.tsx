@@ -16,7 +16,7 @@ import parse, { HTMLReactParserOptions, Element, Text} from 'html-react-parser';
 import hljs  from 'highlight.js';
 import 'highlight.js/styles/hybrid.css';
 
-export async function generateMetadata(  { params }: {params: {slug: string}, parent: ResolvingMetadata}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const data = await getNewsDetail(params.slug)
   return getSEOTags({
     title: data.title + ' | ' + config.appName,
