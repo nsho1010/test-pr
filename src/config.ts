@@ -7,7 +7,7 @@ const config = {
   appDescription:
     "私たちは、最新テクノロジーとイノベーションで、お客様の業務効率を爆速化します。",
   // 必須: ドメイン名 (no https://, not trialing slash at the end, just the naked domain)
-  domainName: "bakusoku-hp.com",
+  domainName: "bakusoku-hp.vercel.app",
   // twitterのユーザー名
   twitter: "",
   // HeaderとFooterで表示するリンク
