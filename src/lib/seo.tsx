@@ -27,6 +27,7 @@ export const getSEOTags = ({
       title: openGraph?.title || config.appName,
       description: openGraph?.description || config.appDescription,
       url: openGraph?.url || `https://${config.domainName}/`,
+      siteName: config.appName,
       locale: "ja_JP",
       type: "website",
     },
