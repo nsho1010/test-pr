@@ -1,13 +1,7 @@
 import { ImageResponse } from 'next/og'
-import { Noto_Sans_JP } from 'next/font/google'
-import { cn } from '@/lib/utils'
 import config from '@/config'
 
 export const runtime = 'edge' 
-const notoSansJP = Noto_Sans_JP({
-  subsets: ['latin'],
-  variable: '--font-noto-sans-jp',
-})
 export const alt = config.appName
 export const size = {
   width: 1200,
@@ -27,7 +21,6 @@ export default async function Image() {
         alignItems: 'center',
         justifyContent: 'center',
       }}
-      className={cn(notoSansJP.className)}
     >
       {config.appName}
     </div>
