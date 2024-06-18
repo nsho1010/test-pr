@@ -14,11 +14,12 @@ export const contentType = 'image/png'
 export default async function Image() {
   const content = (
     <div
-      className='flex items-center justify-center h-full'
+      style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}
     >
-      <Zap className="w-6 h-6 text-primary" fill="currentColor" />
-      <span className="font-extrabold text-lg text-foreground">{config.appName}</span>
+      <Zap style={{ width: '24px', height: '24px', color: 'var(--color-primary)' }} fill="currentColor" />
+      <span style={{ fontWeight: 'bold', fontSize: '1.125rem', color: 'var(--color-foreground)' }}>{config.appName}</span>
     </div>
   );
   return new ImageResponse(content, size)
 }
+
