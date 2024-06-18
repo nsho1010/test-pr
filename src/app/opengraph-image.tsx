@@ -1,7 +1,9 @@
 import { ImageResponse } from 'next/og'
+import { Zap } from 'lucide-react'
 import config from '@/config'
 
 export const runtime = 'edge' 
+
 export const alt = config.appName
 export const size = {
   width: 1200,
@@ -12,17 +14,10 @@ export const contentType = 'image/png'
 export default async function Image() {
   const content = (
     <div
-      style={{
-        fontSize: 48,
-        background: 'white',
-        width: '100%',
-        height: '100%',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}
+      className='flex items-center justify-center h-full'
     >
-      {config.appName}
+      <Zap className="w-6 h-6 text-primary" fill="currentColor" />
+      <span className="font-extrabold text-lg text-foreground">{config.appName}</span>
     </div>
   );
   return new ImageResponse(content, size)
