@@ -39,12 +39,6 @@ export const client = createClient({
 export const getNewsList = async (queries?: MicroCMSQueries) => {
   const listData = await client
     .getList<News>({
-    // TODO:Next.js15で不要になる
-    customRequestInit: {
-      next: {
-        revalidate: 60,
-      },
-    },
     endpoint: 'news',
     queries,
   })
@@ -56,12 +50,6 @@ export const getNewsList = async (queries?: MicroCMSQueries) => {
 export const getNewsDetail = async (contentId: string, queries?: MicroCMSQueries) => {
   const detailData = await client
     .getListDetail<News>({
-    // TODO:Next.js15で不要になる
-    customRequestInit: {
-      next: {
-        revalidate: 60,
-      },
-    },
     endpoint: 'news',
     contentId,
     queries,
