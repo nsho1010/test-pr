@@ -4,10 +4,10 @@
 
 ## 始め方
 
-1. [Tutorial](https://bakusoku-hp.com/docs) に従って、リポジトリをクローンしてローカルサーバーを実行します 💻
+1. [Tutorial](https://docs.bakusoku-hp.com) に従って、リポジトリをクローンしてローカルサーバーを実行します 💻
 
-2. ローカルサーバーを実行したら、[Tutorial](https://bakusoku-hp.com/docs/tutorials) に従って、爆速でホームページを作成しましょう ⚡️
+2. ローカルサーバーを実行したら、自由にカスタマイズしてください ⚡️
 
 ## Support
 
-TwitterでDM [@bani24884](https://twitter.com/bani24884) にお問い合わせください。
+TwitterでDM [@bani24884](https://x.com/bani24884) にお問い合わせください。
