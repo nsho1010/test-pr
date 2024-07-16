@@ -39,6 +39,11 @@ export const client = createClient({
 export const getNewsList = async (queries?: MicroCMSQueries) => {
   const listData = await client
     .getList<News>({
+    customRequestInit: {
+      next: {
+        tags: ['news'],
+      },
+    },
     endpoint: 'news',
     queries,
   })
@@ -50,6 +55,11 @@ export const getNewsList = async (queries?: MicroCMSQueries) => {
 export const getNewsDetail = async (contentId: string, queries?: MicroCMSQueries) => {
   const detailData = await client
     .getListDetail<News>({
+    customRequestInit: {
+      next: {
+        tags: ['news'],
+      },
+    },
     endpoint: 'news',
     contentId,
     queries,
