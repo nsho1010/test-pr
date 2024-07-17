@@ -46,3 +46,23 @@ export const generatePagination = (currentPage: number, totalPages: number) => {
     totalPages,
   ];
 };
+
+export const secureCompare = (a: string, b: string) => {
+  if (typeof a !== 'string' || typeof b !== 'string') {
+    return false;
+  }
+  
+  const bufferA = Buffer.from(a);
+  const bufferB = Buffer.from(b);
+
+  if (bufferA.length !== bufferB.length) {
+    return false;
+  }
+
+  let result = 0;
+  for (let i = 0; i < bufferA.length; i++) {
+    result |= bufferA[i] ^ bufferB[i];
+  }
+
+  return result === 0;
+}
