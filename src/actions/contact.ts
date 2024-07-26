@@ -1,6 +1,5 @@
 'use server'; 
 
-import { revalidatePath } from 'next/cache';
 import { createContact } from "@/lib/microcms";
 import { z } from "zod";
 
@@ -34,8 +33,6 @@ export const submitContactForm = async (prevState: ContactFormState, formData: F
     }
 
     await createContact(validatedData.data);
-
-    revalidatePath('/#contact');
     
     return { status: 'success'};
   } catch (error) {
