@@ -10,19 +10,19 @@ import Contact from "@/components/Contact";
 import { Suspense } from "react";
 
 export default function Home() {
-  return (
-    <main className="flex flex-col gap-16 lg:gap-24">
-      <Hero />
-      <Problem />
-      <Benefits />
-      <Product />
-      <Profile />
-      <Member />
-      <Suspense fallback={<div>Loading...</div>}>
-        <News />
-      </Suspense>
-      <CompanyInfo />
-      <Contact />
-    </main>
-  );
+    return (
+        <main className="flex flex-col gap-16 lg:gap-24">
+            <Hero />
+            <Problem />
+            <Benefits />
+            <Product />
+            <Profile />
+            <Member />
+            <Suspense fallback={<div>Loading...</div>}>
+                <News />
+            </Suspense>
+            <CompanyInfo />
+            <Contact />
+        </main>
+    );
 }
